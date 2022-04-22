@@ -1,0 +1,2 @@
+module Core_java {
+}
