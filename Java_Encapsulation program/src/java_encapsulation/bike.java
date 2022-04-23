@@ -1,11 +1,11 @@
 package java_encapsulation;
 
-public class bike
+public class bike     
 {
 	int year_ofpurchase;
-	String make;
-	int model;
-	double cost;
+	String make; //data member
+	int model;    //data member
+	double cost;  //data member
 	public void display1()  //member function 
 	{
 		System.out.println("year of purchse" +2001);
