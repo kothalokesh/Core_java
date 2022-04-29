@@ -32,7 +32,6 @@ public class D {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		four ob1=new four();
-		ob1.disp1();
 		ob1.disp2();
 		ob1.disp3();
 		ob1.disp4();
