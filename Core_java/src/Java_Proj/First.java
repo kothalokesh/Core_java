@@ -1,10 +1,14 @@
-package Java_Proj;
+package Java_Proj;//pakage name
 
-public class First {
+public class First {//class name
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("hello java");
+		System.out.println("hello java");/*printer
+		8eutie09ut8ju8
+		etijtdipjvoirjvwoio
+		trjoiejoijeoip
+		*/
+	
 
 	}
 
