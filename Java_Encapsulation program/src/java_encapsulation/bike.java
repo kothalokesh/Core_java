@@ -14,7 +14,7 @@ public class bike
 	public void display2()
 	{
 		System.out.println("model"+1999);
-		System.out.println("cost"+20000);
+		System.out.println("cost"+25000);
 	}
 
 	public static void main(String[] args) {
