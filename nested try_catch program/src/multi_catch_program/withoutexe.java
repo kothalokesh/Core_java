@@ -8,7 +8,7 @@ public class withoutexe {
 		{
 			int a=0;
 			System.out.println("a="+a);
-			int b=66/a;
+			int b=55/a;
 			int c[]= {1};
 			c[45]=99;
 		}
