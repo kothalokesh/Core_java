@@ -4,20 +4,20 @@ public class interthread {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		interthreadA b=new interthreadA();
-		b.start();
-		synchronized(b)
+		interthreadA a=new interthreadA();
+		a.start();
+		synchronized(a)
 		{
 			try {
-				System.out.println("waiting for b complete");
-				b.wait();
+				System.out.println("waiting for a complete");
+				a.wait();
 				
 			}
 			catch(InterruptedException e)
 			{
 			   e.printStackTrace();
 			}
-			System.out.println("Total is:"+b.total);
+			System.out.println("Total is:"+a.total);
 		}
 
 	}
