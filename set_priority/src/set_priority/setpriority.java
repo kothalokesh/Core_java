@@ -5,7 +5,7 @@ public class setpriority extends Thread
 	public void run()
 	{
 		System.out.println("THREAD"+ " " +Thread.currentThread().getName() + "started");
-		System.out.println(" THREAD SETPROIRITY"+" " +Thread.currentThread().getPriority() + "running");
+		System.out.println(" Thread SetPreority "+" " +Thread.currentThread().getPriority() + "running");
 	
 	}
 
