@@ -17,7 +17,7 @@ public class stackpg {
 	
  System.out.println(obj.peek());
  
-//obj.remove(0);
+//obj.remove(0);                          //remove location only
  //System.out.println(obj);
  
 
