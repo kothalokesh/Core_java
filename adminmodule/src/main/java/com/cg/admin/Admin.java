@@ -6,38 +6,36 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 //created class as admin
-@Entity                      //
+@Entity                      
 public class Admin {
-	private Long id;            //using id as private and Long( wrapper class)
+	
+	@Id                                              
+    //@Id specifies the primary key
+    @GeneratedValue(strategy=GenerationType.IDENTITY) 
+	private int id;            //using id as private and int
 	private String name;        //using name as private and String (character) 
 	private String password;    //using password as private and String (character) 
 	
 	
 	//created constructor for id,name,password
-	private Admin(Long id, String name, String password) {
+	private Admin(int id, String name, String password) {
+		super();
 		this.id = id;
 		this.name = name;
 		this.password = password;
 	}
-
-    
-   //generate one default constructor because calling for crud operations
 	
+    //created default constructor 
 	private Admin() {
-		super();
-	}
-   
-	//generate getter and setter methods for id,name,password
 	
-    @Id                                              
-    //@Id specifies the primary key
-    
-    @GeneratedValue(strategy=GenerationType.IDENTITY)  
-	public Long getId() {
+	}
+	//generate getter and setter methods for id,name,password
+
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

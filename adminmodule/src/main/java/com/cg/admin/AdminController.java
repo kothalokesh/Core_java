@@ -18,15 +18,15 @@ public class AdminController {
 	 @Autowired
 	 private AdminService service;
 	 
-	 //RESTful API methods for retrival operations
+	 //Retrieve all rows from database
 	 @GetMapping("/admins")
 	 public List<Admin> List() 
 	 {
 		 return service.ListAll(); 
 	 }
-	 
+	 //Retrive specific record from database
 	 @GetMapping("/admins/{id}") 
-	 public ResponseEntity<Admin> get (@PathVariable Long id) 
+	 public ResponseEntity<Admin> get (@PathVariable int id) 
 	 { 
 			Admin admin=service.get(id); 
 			 return new ResponseEntity<Admin> (admin, HttpStatus.OK);
@@ -36,15 +36,16 @@ public class AdminController {
 	 @PostMapping("/admins")
 	 public void  add(@RequestBody Admin admin)
 	 {
+		 //System.out.println(admin.getId()+"/n"+admin.getName()+"/n"+admin.getPassword());
 		 service.save(admin);
 	 }
 
 	//RESTful API methods for Update operation
 	 @PutMapping("/admins")
-	 public ResponseEntity<?> update (@RequestBody Admin admin,@PathVariable Long id) 
+	 public ResponseEntity<?> update (@RequestBody Admin admin,@PathVariable int id) 
 	 { 
 		 try {
-			Admin existadmin=service.get(id); 
+			Admin existAdmin=service.get(id); 
 			service.save(admin);
 			 return new ResponseEntity<Admin> (admin, HttpStatus.OK);
 		} catch (Exception e) {
@@ -55,7 +56,7 @@ public class AdminController {
 	 
 	//RESTful API methods for Delete operation
 	 @DeleteMapping("/admins/{id}")
-	 public void delete(@PathVariable Long id)
+	 public void delete(@PathVariable int id)
 	 {
 		 service.delete(id);
 	 }

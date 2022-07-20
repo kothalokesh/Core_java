@@ -20,7 +20,7 @@ public class AdminService {
 		return repository.findAll();
 	}
 	
-	public Admin get(Long id) {
+	public Admin get(int id) {
 		
 		return repository.findById(id).get();
 	}
@@ -30,7 +30,7 @@ public class AdminService {
 		
 	}
 
-	public void delete(Long id) 
+	public void delete(int id) 
 	{
 		repository.deleteById(id);
 		
