@@ -50,7 +50,7 @@ public class Admin {
 	public String getPassword() {
 		return password;
 	}
-//password
+
 	public void setPassword(String password) {
 		this.password = password;
 	}

@@ -26,13 +26,13 @@ public class AdminController {
 	 }
 	 //Retrive specific record from database
 	 @GetMapping("/admins/{id}") 
-	 public ResponseEntity<Admin> get (@PathVariable int id) 
+	 public ResponseEntity<Admin> get (@PathVariable Integer id) 
 	 { 
 			Admin admin=service.get(id); 
 			 return new ResponseEntity<Admin> (admin, HttpStatus.OK);
 	 }
 	 
-	 //RESTful API methods for Create operation
+	 //RESTful API methods for Create operation 
 	 @PostMapping("/admins")
 	 public void  add(@RequestBody Admin admin)
 	 {
@@ -42,7 +42,7 @@ public class AdminController {
 
 	//RESTful API methods for Update operation
 	 @PutMapping("/admins")
-	 public ResponseEntity<?> update (@RequestBody Admin admin,@PathVariable int id) 
+	 public ResponseEntity<?> update (@RequestBody Admin admin,@PathVariable Integer id) 
 	 { 
 		 try {
 			Admin existAdmin=service.get(id); 
@@ -56,7 +56,7 @@ public class AdminController {
 	 
 	//RESTful API methods for Delete operation
 	 @DeleteMapping("/admins/{id}")
-	 public void delete(@PathVariable int id)
+	 public void delete(@PathVariable Integer id)
 	 {
 		 service.delete(id);
 	 }
